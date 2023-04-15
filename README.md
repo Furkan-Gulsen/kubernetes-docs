@@ -11,3 +11,5 @@ Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri paylaşara
 ## Bölümler:
 
 - **ReplicaSet:** [Readme](https://github.com/Furkan-Gulsen/kubernetes-docs/tree/main/ReplicaSet) | [Website](https://furkangulsen.gitbook.io/kubernetes/)
+
+- **Rollout ve Rollback:** [Readme](https://github.com/Furkan-Gulsen/kubernetes-docs/tree/main/Rollout_and_Rollback) | [Website](https://furkangulsen.gitbook.io/kubernetes/rollout-ve-rollback)

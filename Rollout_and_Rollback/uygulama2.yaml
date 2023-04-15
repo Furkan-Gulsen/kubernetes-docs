@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rcdeployment
+  labels:
+    team: development
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: recreate
+  strategy:
+    type: Recreate # Recreate stratejisi burada tanımlanıyor
+  template:
+    metadata:
+      labels:
+        app: recreate
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.20 # yeni bir sürüm tanımlanıyor
+          ports:
+            - containerPort: 80
