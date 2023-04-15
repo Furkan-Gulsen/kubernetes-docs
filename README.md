@@ -10,4 +10,4 @@ Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri paylaşara
 
 ## Bölümler:
 
-- **ReplicaSet:** [Readme](https://furkangulsen.gitbook.io/kubernetes) | [Website](https://furkangulsen.gitbook.io/kubernetes/)
+- **ReplicaSet:** [Readme](https://github.com/Furkan-Gulsen/kubernetes-docs/tree/main/ReplicaSet) | [Website](https://furkangulsen.gitbook.io/kubernetes/)
