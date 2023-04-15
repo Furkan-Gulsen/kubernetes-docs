@@ -13,3 +13,9 @@ Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makaleler
 - **ReplicaSet:** [Readme](https://github.com/Furkan-Gulsen/kubernetes-docs/tree/main/ReplicaSet) | [Website](https://furkangulsen.gitbook.io/kubernetes/)
 
 - **Rollout ve Rollback:** [Readme](https://github.com/Furkan-Gulsen/kubernetes-docs/tree/main/Rollout_and_Rollback) | [Website](https://furkangulsen.gitbook.io/kubernetes/rollout-ve-rollback)
+
+- **Ağ Kuralları:** [Website](https://furkangulsen.gitbook.io/kubernetes/ag-kurallari)
+
+- **Service:** [Website](https://furkangulsen.gitbook.io/kubernetes/service)
+
+- **Livenessprobe:** [Website](https://furkangulsen.gitbook.io/kubernetes/livenessprobe)
