@@ -18,4 +18,10 @@ Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makaleler
 
 - **Service:** [Website](https://furkangulsen.gitbook.io/kubernetes/service)
 
-- **Livenessprobe:** [Website](https://furkangulsen.gitbook.io/kubernetes/livenessprobe)
+- **Liveness Probe:** [Website](https://furkangulsen.gitbook.io/kubernetes/livenessprobe)
+
+- **Readiness Probe:** [Website](https://furkangulsen.gitbook.io/kubernetes/readiness-probe)
+
+- **Resource Limits:** [Website](https://furkangulsen.gitbook.io/kubernetes/resource-limits)
+
+- **Environment Variables:** [Website](https://furkangulsen.gitbook.io/kubernetes/environment-variables)
