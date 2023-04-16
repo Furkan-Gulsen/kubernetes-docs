@@ -14,7 +14,7 @@ Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makaleler
 
 - **Rollout ve Rollback:** [Readme](https://github.com/Furkan-Gulsen/kubernetes-docs/tree/main/Rollout_and_Rollback) | [Website](https://furkangulsen.gitbook.io/kubernetes/rollout-ve-rollback)
 
-- **Ağ Kuralları:** [Readme](https://furkangulsen.gitbook.io/kubernetes/ag-kurallari) | [Website](https://furkangulsen.gitbook.io/kubernetes/ag-kurallari)
+- **Ağ Kuralları:** [Readme](https://github.com/Furkan-Gulsen/kubernetes-docs/tree/main/Ag_Kurallari) | [Website](https://furkangulsen.gitbook.io/kubernetes/ag-kurallari)
 
 - **Service:** [Website](https://furkangulsen.gitbook.io/kubernetes/service)
 
