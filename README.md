@@ -25,3 +25,5 @@ Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makaleler
 - **Resource Limits:** [Website](https://furkangulsen.gitbook.io/kubernetes/resource-limits)
 
 - **Environment Variables:** [Website](https://furkangulsen.gitbook.io/kubernetes/environment-variables)
+
+... devamı gelecektir (yaklaşık 20-25 bölüm daha eklenecektir)
