@@ -8,7 +8,7 @@ Kubernetes cluster'ının kontrol düğümünü oluşturan ve cluster üzerindek
 
 - API Sunucusu (API Server): Kubernetes cluster'ıyla etkileşime geçmek için kullanılan merkezi bir arabirim sağlar. Kullanıcılar ve diğer komponentler, API sunucusu aracılığıyla Kubernetes ile etkileşimde bulunabilir.
 - Etcd: Dağıtılmış bir key-value veritabanıdır ve Kubernetes cluster konfigürasyonu, durumu ve diğer meta verileri saklamak için kullanılır.
-  Scheduler: Yeni oluşturulan pod'ların uygun nodlara (çalışma birimlerine) dağıtılmasından sorumludur. Scheduler, kaynak talepleri, afinite (node tercihleri) ve başka kısıtlamalar gibi faktörleri dikkate alarak en uygun nodları seçer.
+- Scheduler: Yeni oluşturulan pod'ların uygun nodlara (çalışma birimlerine) dağıtılmasından sorumludur. Scheduler, kaynak talepleri, afinite (node tercihleri) ve başka kısıtlamalar gibi faktörleri dikkate alarak en uygun nodları seçer.
 - Kontrol Yöneticisi (Controller Manager): Pod, replica set, deployment gibi Kubernetes kaynaklarının durumunu sürekli olarak izleyen ve istenen duruma getirmek için gerekli eylemleri gerçekleştiren bir komponenttir.
   API İzleyici (API Server'in proxy'si): API sunucusu ile etkileşimde bulunmak için kullanılır ve API sunucusuna gelen talepleri dağıtmak için kullanılır.
 
