@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="logo" src="https://assets.stickpng.com/thumbs/58480a44cef1014c0b5e4917.png" width="224px"/><br/>Kubernetes Türkçe Doküman
+  <img alt="logo" src="https://cdn.dribbble.com/users/530731/screenshots/14753568/kuber-spave_2.png" width="224px"/><br/>Kubernetes Türkçe Doküman
 </h1>
 
 Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makalelerden, kurslardan, notlarımdan) paylaşarak bu alana daha hızlı ve bilgilini girmeni sağlamaktır. Zamanında araştırırken zorlandığım ve vakit alan kısımlarında içerisine alan bu repo sayesinde umarım, DevOps kariyerine Kubernetes teknolojisini hızla katabileceksin 🚀
