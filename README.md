@@ -2,11 +2,11 @@
   <img alt="logo" src="https://cdn.dribbble.com/users/530731/screenshots/14753568/kuber-spave_2.png" width="224px"/><br/>Kubernetes Türkçe Doküman
 </h1>
 
-🚀 Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makalelerden, kurslardan, notlarımdan) paylaşarak bu alana daha hızlı ve bilgilini girmeni sağlamaktır. Zamanında araştırırken zorlandığım ve vakit alan kısımlarında içerisine alan bu repo sayesinde umarım, DevOps kariyerine Kubernetes teknolojisini hızla katabileceksin 
+🚀 Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makalelerden, kurslardan, notlarımdan) paylaşarak bu alana daha hızlı ve bilgilini girmeni sağlamaktır. Zamanında araştırırken zorlandığım ve vakit alan kısımlarında içerisine alan bu repo sayesinde umarım, DevOps kariyerine Kubernetes teknolojisini hızla katabileceksin
 
 ⭐️ Repoyu beğenirseniz daha fazla kişiye ulaşması için yıldız atabilir ve sosyal medya hesaplarınızda paylaşabilirsiniz
 
-⚡️ Bu eğitim serisini aynı zamanda [Kubernetes Dokümanı](https://docs.furkangulsen.com/kubernetes) web sitesinden de takip edebilirsiniz 
+⚡️ Bu eğitim serisini aynı zamanda [Kubernetes Dokümanı](https://docs.furkangulsen.com/kubernetes) web sitesinden de takip edebilirsiniz
 
 ## Bölümler:
 
@@ -23,6 +23,8 @@
 - [Service](#service)
 - [Liveness Probe](#liveness-probe)
 - [Readiness Probe](#readiness-probe)
+- [Resource Limits](#resource-limits)
+- [Environment Variables](#environment-variables)
 
 ---
 
@@ -1023,3 +1025,75 @@ Bu nedenle, Liveness Probe bir konteynerin "canlı" olup olmadığını belirler
 - Probenin yapıldığı yol, pod'un durumunu etkileyebilir. Örneğin, bir dosya yoksa veya bir bağlantı sağlanamazsa, pod başarısız olarak işaretlenebilir ve hizmetlerde kesintiye neden olabilir. Bu nedenle, doğru yol belirtilmelidir.
 
 <br><br>
+
+# Resource Limits
+
+Kubernetes'de, bir konteynerin kullanabileceği maksimum CPU ve bellek miktarını belirlemek için "resource limits" kullanılır. Bu, Kubernetes kubernetes-cluster üzerinde çalışan tüm konteynerlerin adil bir şekilde kaynakları kullanmalarını sağlamaya yardımcı olur. "Resource limits" aynı zamanda konteynerlerin, kullanılabilecek kaynakları aşan yüksek kullanım durumlarında uygulamanın çökmesini veya yavaşlamasını önlemeye yardımcı olur.
+
+"Resource limits" belirli bir konteyner için iki ayrı değer içerir:
+
+- **CPU limiti:** Bir konteynerin maksimum kullanabileceği CPU sayısıdır.
+- **Bellek limiti:** Bir konteynerin maksimum kullanabileceği bellek miktarıdır.
+  Kubernetes, "resource limits" özelliği sayesinde belirli bir miktar CPU veya bellek kullanımı aşıldığında otomatik olarak uygulamayı yeniden başlatarak kaynak tükenmesi durumlarını engellemeye yardımcı olur.
+
+## Uygulama
+
+Aşağıdaki örnek, bir Pod'daki konteyner için CPU ve bellek limitlerini belirlemektedir:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resource-limits
+spec:
+  containers:
+    - name: my-container
+      image: my-image
+      resources:
+        limits:
+          cpu: '1'
+          memory: '2Gi'
+        requests:
+          cpu: '500m'
+          memory: '1Gi'
+```
+
+Bu Pod'da yer alan my-container adlı konteyner için, CPU limiti olarak 1 core ("1") ve bellek limiti olarak 2 gigabayt ("2Gi") tanımlanmaktadır. Ayrıca, CPU isteği olarak yarım core ("500m") ve bellek isteği olarak 1 gigabayt ("1Gi") belirtilmiştir.
+
+> 1 cpu = cpu="1" = cpu: "1000" = cpu="1000m"
+
+## Dikkat Edilmesi Gerekenler
+
+- Limits değerleri belirlenirken, podların ihtiyaç duyduğu kaynakları doğru şekilde belirlemek ve bu değerlerin yeterli olacağından emin olmak önemlidir. Aksi halde podlar yeterli kaynaklara sahip olmadıklarından dolayı hata verebilir ya da düşük performans sergileyebilirler.
+- Limits değerleri, cluster'ın toplam kaynaklarını aşmamalıdır. Aksi halde diğer podlar ve node'lar üzerinde sorunlara yol açabilir.
+- Limits değerleri belirlenirken, podların kullanım senaryosu da dikkate alınmalıdır. Örneğin, bir pod'un CPU kullanımı sabit olabilirken, aynı pod'un RAM kullanımı dinamik olabilir. Bu nedenle, Limits değerleri belirlenirken podların özelliklerine göre farklı sınırlar belirlemek gerekebilir.
+- Limits değerleri, doğru ölçü birimleri ile belirlenmelidir. Örneğin, CPU kullanımı millicore cinsinden, RAM kullanımı ise gigabyte cinsinden ifade edilir.
+- Limits değerleri belirlenirken, podların aynı zamanda Liveness ve Readiness Probe'larına da yeterli kaynak ayrılmalıdır. Aksi halde bu Probe'lar doğru şekilde çalışmayabilir veya yanıltıcı sonuçlar verebilirler.
+
+<br><br>
+
+# Environment Variables
+
+Kubernetes ortam değişkenleri, bir Kubernetes pod veya container'ına ilişkin değişkenlerdir. Pod veya container'ın çalıştığı zaman çevresel değişkenler olarak kullanılabilirler.
+
+Bu değişkenler, genellikle önceden tanımlanmış ve sabit değerlerden oluşur ve pod veya container'ın hangi durumda çalıştırılacağına bağlı olarak belirlenir. Kubernetes, podlar ve konteynerler için önceden tanımlanmış bazı ortam değişkenlerini sağlar, ancak kullanıcıların da kendi değişkenlerini tanımlayabileceği esnek bir yapı sunar.
+
+Örneğin, bir uygulamanın veritabanı bağlantı dizesi genellikle bir ortam değişkeni olarak kullanılır. Böylece uygulamanın farklı veritabanlarına bağlanması gerektiğinde sadece ortam değişkeni değiştirilir ve uygulama yeniden başlatılır.
+
+Ortam değişkenleri, Kubernetes pod ve container konfigürasyon dosyalarında belirtilir. Bunlar genellikle YAML formatında tanımlanır. Örneğin:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: my-container
+      image: my-image
+      env:
+        - name: MY_ENV_VAR
+          value: my-env-value
+```
+
+Yukarıdaki örnekte, MY_ENV_VAR adlı bir ortam değişkeni tanımlanmıştır ve my-env-value değeri atanmıştır. Bu pod başlatıldığında, my-container içindeki herhangi bir işlemin MY_ENV_VAR değişkenini kullanabilmesi için hazır olacaktır.
