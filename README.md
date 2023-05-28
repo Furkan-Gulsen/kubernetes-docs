@@ -2,11 +2,11 @@
   <img alt="logo" src="https://cdn.dribbble.com/users/530731/screenshots/14753568/kuber-spave_2.png" width="224px"/><br/>Kubernetes Türkçe Doküman
 </h1>
 
-Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makalelerden, kurslardan, notlarımdan) paylaşarak bu alana daha hızlı ve bilgilini girmeni sağlamaktır. Zamanında araştırırken zorlandığım ve vakit alan kısımlarında içerisine alan bu repo sayesinde umarım, DevOps kariyerine Kubernetes teknolojisini hızla katabileceksin 🚀
+🚀 Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makalelerden, kurslardan, notlarımdan) paylaşarak bu alana daha hızlı ve bilgilini girmeni sağlamaktır. Zamanında araştırırken zorlandığım ve vakit alan kısımlarında içerisine alan bu repo sayesinde umarım, DevOps kariyerine Kubernetes teknolojisini hızla katabileceksin 
 
-🙏 Bu repoyu paylaştığım için bana teşekkür etmek istersen repoya yıldız vermen yeterli olacaktır. İyi öğrenmeler.
+⭐️ Repoyu beğenirseniz daha fazla kişiye ulaşması için yıldız atabilir ve sosyal medya hesaplarınızda paylaşabilirsiniz
 
-⚡️ Ayıca bu reponun bir websitesi var. Oraya giderek burada yer alan sayfaları çok daha kolay inceleyebilirsin: [Kubernetes Dokümanı](https://docs.furkangulsen.com/kubernetes)
+⚡️ Bu eğitim serisini aynı zamanda [Kubernetes Dokümanı](https://docs.furkangulsen.com/kubernetes) web sitesinden de takip edebilirsiniz 
 
 ## Bölümler:
 
@@ -19,7 +19,7 @@ Bu GitHub Reposunda amacım Kubernetes'e dair öğrendiğim bilgileri (makaleler
 - [Deployment](#deployment)
 - [Replicaset](#replicaset)
 - [Rollout ve Rollback](#rollout-ve-rollback)
-- [Ağ Kuralları](#ag_kurallari)
+- [Ağ Kuralları](#ağ-kuralları)
 - [Service](#service)
 - [Liveness Probe](#liveness-probe)
 - [Readiness Probe](#readiness-probe)
